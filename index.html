@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TO DO LIST</title>
+</head>
+<body>
+   
+    <header>
+        <div class="container">
+            <h1>TO DO LIST</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-value" id="total-tasks">0</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="completed-tasks">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="pending-tasks">0</div>
+                <div class="stat-label">Pending</div>
+            </div>
+        </div>
+
+        <div class="app-container">
+            <div class="task-input-container">
+                <div class="input-group">
+                    <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off">
+                    <select id="priority-select">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <button id="add-task-btn">Add Task</button>
+                </div>
+            </div>
+
+            <div class="task-list" id="task-list">
+                <div class="empty-state" id="empty-state">
+                    <i>📝</i>
+                    <p>Your task list is empty</p>
+                    <button id="add-sample-tasks" class="btn-sm">Add Sample Tasks</button>
+                </div>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-item active" data-filter="all">All</button>
+                <button class="filter-item" data-filter="active">Active</button>
+                <button class="filter-item" data-filter="completed">Completed</button>
+                <div style="flex-grow: 1;"></div>
+                <button id="clear-completed-btn" class="filter-item">Clear Completed</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"> </script>
+</body>
+</html>
